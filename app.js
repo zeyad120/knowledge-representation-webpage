@@ -628,5 +628,337 @@ let score = 0;
 let isQuizCompleted = false;
 let isNavVisible = false;
 
-// (The rest of the original app.js logic follows unchanged...)
-// ... (omitted for brevity)
+// DOM Elements
+const categoriesGrid = document.getElementById('categoriesGrid');
+const homeScreen = document.getElementById('homeScreen');
+const quizScreen = document.getElementById('quizScreen');
+const resultsScreen = document.getElementById('resultsScreen');
+const reviewScreen = document.getElementById('reviewScreen');
+const quizTitle = document.getElementById('quizTitle');
+const questionText = document.getElementById('questionText');
+const optionsContainer = document.getElementById('optionsContainer');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+const submitButton = document.getElementById('submitButton');
+const quitButton = document.getElementById('quitButton');
+const progressFill = document.getElementById('progressFill');
+const progressText = document.getElementById('progressText');
+const questionGrid = document.getElementById('questionGrid');
+const questionNavigation = document.getElementById('questionNavigation');
+const navToggleButton = document.getElementById('navToggleButton');
+const incorrectPopup = document.getElementById('incorrectPopup');
+const themeToggle = document.getElementById('themeToggle');
+
+// Results elements
+const scoreNumber = document.getElementById('scoreNumber');
+const scoreTotal = document.getElementById('scoreTotal');
+const scoreRing = document.getElementById('scoreRing');
+const correctCount = document.getElementById('correctCount');
+const incorrectCount = document.getElementById('incorrectCount');
+const accuracyValue = document.getElementById('accuracyValue');
+const reviewButton = document.getElementById('reviewButton');
+const homeButton = document.getElementById('homeButton');
+const reviewQuestions = document.getElementById('reviewQuestions');
+const reviewHomeButton = document.getElementById('reviewHomeButton');
+
+// Initialize App
+function init() {
+  renderCategories();
+  setupEventListeners();
+  loadTheme();
+}
+
+// Render Categories on Home Screen
+function renderCategories() {
+  categoriesGrid.innerHTML = '';
+  quizDatabase.categories.forEach(category => {
+    const card = document.createElement('div');
+    card.className = 'category-card';
+    card.innerHTML = `
+      <div class="category-icon">${category.icon}</div>
+      <h3 class="category-title">${category.title}</h3>
+      <p class="category-description">${category.description}</p>
+      <span class="category-count">${category.questions.length} questions</span>
+    `;
+    card.addEventListener('click', () => startQuiz(category));
+    categoriesGrid.appendChild(card);
+  });
+}
+
+// Start Quiz
+function startQuiz(category) {
+  currentCategory = category;
+  currentQuestionIndex = 0;
+  userAnswers = {};
+  score = 0;
+  isQuizCompleted = false;
+  isNavVisible = false;
+  
+  quizTitle.textContent = category.title;
+  showScreen('quiz');
+  renderQuestion();
+  updateProgress();
+  renderQuestionGrid();
+  updateNavigationButtons();
+}
+
+// Render Current Question
+function renderQuestion() {
+  const question = currentCategory.questions[currentQuestionIndex];
+  questionText.textContent = question.question;
+  
+  optionsContainer.innerHTML = '';
+  question.options.forEach((option, index) => {
+    const optionElement = document.createElement('div');
+    optionElement.className = 'option';
+    
+    const selectedAnswer = userAnswers[currentQuestionIndex];
+    if (selectedAnswer === index) {
+      optionElement.classList.add('selected');
+    }
+    
+    optionElement.innerHTML = `
+      <span class="option-label">${String.fromCharCode(65 + index)}</span>
+      <span class="option-text">${option}</span>
+    `;
+    optionElement.addEventListener('click', () => selectAnswer(index));
+    optionsContainer.appendChild(optionElement);
+  });
+  
+  updateQuestionGrid();
+}
+
+// Select Answer
+function selectAnswer(answerIndex) {
+  userAnswers[currentQuestionIndex] = answerIndex;
+  renderQuestion();
+  updateNavigationButtons();
+}
+
+// Update Progress Bar
+function updateProgress() {
+  const total = currentCategory.questions.length;
+  const current = currentQuestionIndex + 1;
+  const percentage = (current / total) * 100;
+  
+  progressFill.style.width = `${percentage}%`;
+  progressText.textContent = `${current} / ${total}`;
+}
+
+// Render Question Grid
+function renderQuestionGrid() {
+  questionGrid.innerHTML = '';
+  currentCategory.questions.forEach((_, index) => {
+    const gridItem = document.createElement('button');
+    gridItem.className = 'question-nav-button';
+    gridItem.textContent = index + 1;
+    gridItem.addEventListener('click', () => goToQuestion(index));
+    questionGrid.appendChild(gridItem);
+  });
+  updateQuestionGrid();
+}
+
+// Update Question Grid
+function updateQuestionGrid() {
+  const items = questionGrid.querySelectorAll('.question-nav-button');
+  items.forEach((item, index) => {
+    item.classList.remove('answered', 'current');
+    if (index === currentQuestionIndex) {
+      item.classList.add('current');
+    }
+    if (userAnswers[index] !== undefined) {
+      item.classList.add('answered');
+    }
+  });
+}
+
+// Go to Specific Question
+function goToQuestion(index) {
+  currentQuestionIndex = index;
+  renderQuestion();
+  updateProgress();
+  updateNavigationButtons();
+}
+
+// Update Navigation Buttons
+function updateNavigationButtons() {
+  prevButton.disabled = currentQuestionIndex === 0;
+  
+  const totalQuestions = currentCategory.questions.length;
+  const answeredCount = Object.keys(userAnswers).length;
+  
+  if (currentQuestionIndex === totalQuestions - 1) {
+    nextButton.style.display = 'none';
+    if (answeredCount === totalQuestions) {
+      submitButton.style.display = 'block';
+    } else {
+      submitButton.style.display = 'none';
+    }
+  } else {
+    nextButton.style.display = 'block';
+    submitButton.style.display = 'none';
+  }
+}
+
+// Navigate Questions
+function navigate(direction) {
+  const totalQuestions = currentCategory.questions.length;
+  
+  if (direction === 'next' && currentQuestionIndex < totalQuestions - 1) {
+    currentQuestionIndex++;
+  } else if (direction === 'prev' && currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+  }
+  
+  renderQuestion();
+  updateProgress();
+  updateNavigationButtons();
+}
+
+// Submit Quiz
+function submitQuiz() {
+  calculateScore();
+  isQuizCompleted = true;
+  showScreen('results');
+  renderResults();
+}
+
+// Calculate Score
+function calculateScore() {
+  score = 0;
+  currentCategory.questions.forEach((question, index) => {
+    if (userAnswers[index] === question.correct) {
+      score++;
+    }
+  });
+}
+
+// Render Results
+function renderResults() {
+  const total = currentCategory.questions.length;
+  const percentage = Math.round((score / total) * 100);
+  
+  scoreNumber.textContent = score;
+  scoreTotal.textContent = `/ ${total}`;
+  correctCount.textContent = score;
+  incorrectCount.textContent = total - score;
+  accuracyValue.textContent = `${percentage}%`;
+  
+  // Update circular progress
+  const circumference = 2 * Math.PI * 54;
+  const offset = circumference - (percentage / 100) * circumference;
+  scoreRing.style.strokeDashoffset = offset;
+  
+  // Save score
+  quizDatabase.scores[currentCategory.id] = score;
+}
+
+// Review Answers
+function reviewAnswers() {
+  reviewQuestions.innerHTML = '';
+  currentCategory.questions.forEach((question, index) => {
+    const userAnswer = userAnswers[index];
+    const isCorrect = userAnswer === question.correct;
+    
+    const reviewItem = document.createElement('div');
+    reviewItem.className = `review-item ${isCorrect ? 'correct' : 'incorrect'}`;
+    reviewItem.innerHTML = `
+      <div class="review-question">
+        <span class="review-number">${index + 1}</span>
+        <p class="review-text">${question.question}</p>
+      </div>
+      <div class="review-answer">
+        <p class="user-answer">Your answer: ${userAnswer !== undefined ? question.options[userAnswer] : 'Not answered'}</p>
+        <p class="correct-answer">Correct answer: ${question.options[question.correct]}</p>
+      </div>
+    `;
+    reviewQuestions.appendChild(reviewItem);
+  });
+  
+  showScreen('review');
+}
+
+// Show Screen
+function showScreen(screenName) {
+  homeScreen.classList.remove('active');
+  quizScreen.classList.remove('active');
+  resultsScreen.classList.remove('active');
+  reviewScreen.classList.remove('active');
+  
+  switch(screenName) {
+    case 'home':
+      homeScreen.classList.add('active');
+      break;
+    case 'quiz':
+      quizScreen.classList.add('active');
+      break;
+    case 'results':
+      resultsScreen.classList.add('active');
+      break;
+    case 'review':
+      reviewScreen.classList.add('active');
+      break;
+  }
+}
+
+// Toggle Question Navigation
+function toggleNavigation() {
+  isNavVisible = !isNavVisible;
+  if (isNavVisible) {
+    questionNavigation.classList.add('show');
+    navToggleButton.textContent = 'Hide Question Navigation';
+  } else {
+    questionNavigation.classList.remove('show');
+    navToggleButton.textContent = 'Show Question Navigation';
+  }
+}
+
+// Show Incorrect Popup
+function showIncorrectPopup() {
+  incorrectPopup.classList.add('show');
+  setTimeout(() => {
+    incorrectPopup.classList.remove('show');
+  }, 2000);
+}
+
+// Theme Toggle
+function toggleTheme() {
+  const currentTheme = document.body.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.body.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme === 'dark');
+}
+
+// Load Theme
+function loadTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.body.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme === 'dark');
+}
+
+// Update Theme Icon
+function updateThemeIcon(isDark) {
+  const themeIcon = themeToggle.querySelector('.theme-icon');
+  themeIcon.textContent = isDark ? '☀️' : '🌙';
+}
+
+// Setup Event Listeners
+function setupEventListeners() {
+  prevButton.addEventListener('click', () => navigate('prev'));
+  nextButton.addEventListener('click', () => navigate('next'));
+  submitButton.addEventListener('click', submitQuiz);
+  quitButton.addEventListener('click', () => {
+    if (confirm('Are you sure you want to quit? Your progress will be lost.')) {
+      showScreen('home');
+    }
+  });
+  navToggleButton.addEventListener('click', toggleNavigation);
+  reviewButton.addEventListener('click', reviewAnswers);
+  homeButton.addEventListener('click', () => showScreen('home'));
+  reviewHomeButton.addEventListener('click', () => showScreen('home'));
+  themeToggle.addEventListener('click', toggleTheme);
+}
+
+// Initialize on DOM Load
+document.addEventListener('DOMContentLoaded', init);
