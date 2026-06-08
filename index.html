@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Representation Quiz</title>
+  <link rel="stylesheet" href="./style.css">
+  <base href="./">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">🧠</span>
+        <span class="logo-text">KR Quiz</span>
+      </div>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Incorrect Answer Popup -->
+  <div class="incorrect-popup" id="incorrectPopup">
+    <span class="popup-text">غلط يا شاذ</span>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Home Screen -->
+    <section class="screen home-screen active" id="homeScreen">
+      <div class="screen-header">
+        <h1 class="screen-title">Knowledge Representation Quiz</h1>
+        <p class="screen-subtitle">Test your knowledge on College course</p>
+      </div>
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- Category cards will be injected here -->
+      </div>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section class="screen quiz-screen" id="quizScreen">
+      <div class="quiz-header">
+        <h2 class="quiz-title" id="quizTitle">Quiz Title</h2>
+        <button type="button" class="quit-button" id="quitButton">Quit Quiz</button>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="progress-text" id="progressText">1 / 1</span>
+      </div>
+      <div class="question-navigation-toggle">
+        <button type="button" class="nav-toggle-button" id="navToggleButton">Show Question Navigation</button>
+      </div>
+      <div class="question-navigation" id="questionNavigation">
+        <div class="question-grid" id="questionGrid"></div>
+      </div>
+      <div class="question-container">
+        <h3 class="question-text" id="questionText">Question text</h3>
+        <div class="options-container" id="optionsContainer"></div>
+      </div>
+      <div class="quiz-navigation">
+        <button type="button" class="nav-button prev-button" id="prevButton">Previous</button>
+        <button type="button" class="nav-button next-button" id="nextButton">Next</button>
+        <button type="button" class="nav-button submit-button" id="submitButton" style="display:none;">Submit Quiz</button>
+      </div>
+    </section>
+
+    <!-- Results Screen -->
+    <section class="screen results-screen" id="resultsScreen">
+      <div class="results-header">
+        <h2 class="results-title">Quiz Results</h2>
+      </div>
+      <div class="score-container">
+        <div class="circular-progress">
+          <svg class="progress-ring" viewBox="0 0 120 120">
+            <circle class="progress-ring-bg" cx="60" cy="60" r="54"></circle>
+            <circle class="progress-ring-fill" id="scoreRing" cx="60" cy="60" r="54"></circle>
+          </svg>
+          <div class="score-text">
+            <span class="score-number" id="scoreNumber">0</span>
+            <span class="score-total" id="scoreTotal">/ 0</span>
+          </div>
+        </div>
+      </div>
+      <div class="statistics-container">
+        <div class="stat-card correct-stat">
+          <span class="stat-icon">✓</span>
+          <div class="stat-info">
+            <span class="stat-label">Correct</span>
+            <span class="stat-value" id="correctCount">0</span>
+          </div>
+        </div>
+        <div class="stat-card incorrect-stat">
+          <span class="stat-icon">✗</span>
+          <div class="stat-info">
+            <span class="stat-label">Incorrect</span>
+            <span class="stat-value" id="incorrectCount">0</span>
+          </div>
+        </div>
+        <div class="stat-card accuracy-stat">
+          <span class="stat-icon">%</span>
+          <div class="stat-info">
+            <span class="stat-label">Accuracy</span>
+            <span class="stat-value" id="accuracyValue">0%</span>
+          </div>
+        </div>
+      </div>
+      <div class="results-navigation">
+        <button type="button" class="nav-button review-button" id="reviewButton">Review Answers</button>
+        <button type="button" class="nav-button home-button" id="homeButton">Return to Home</button>
+      </div>
+    </section>
+
+    <!-- Review Screen -->
+    <section class="screen review-screen" id="reviewScreen">
+      <div class="review-header">
+        <h2 class="review-title">Review Answers</h2>
+        <button type="button" class="nav-button home-button" id="reviewHomeButton">Return to Home</button>
+      </div>
+      <div class="review-questions" id="reviewQuestions"></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
