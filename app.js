@@ -1454,6 +1454,317 @@ const quizDatabase = {
           explanation: ''
         }
       ]
+    },
+    // AI Mock Exam
+    {
+      id: 'ai-mock-exam',
+      title: 'AI Mock Exam',
+      description: 'Comprehensive mock exam with 50 questions',
+      icon: '🧪',
+      questions: [
+        // Section A: MCQ (1-40)
+        {
+          question: 'Wumpus World is a classic problem, best example of _______.',
+          options: ['Knowledge based Game', 'Reasoning with Knowledge', 'Single player Game', 'Two player Game'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Uncertainty arises in Wumpus World because sensors give _______.',
+          options: ['Full & Global information', 'Partial & Global Information', 'Partial & local Information', 'Full & local information'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'Which search uses problem specific knowledge?',
+          options: ['Informed search', 'DFS', 'BFS', 'Uninformed search'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'A search is optimal when _______.',
+          options: ['heuristic is inconsistent', 'heuristic is consistent', 'BFS used', 'DFS used'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Greedy best-first search expands _______.',
+          options: ['random node', 'closest to goal', 'deepest node', 'root only'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Path cost is _______.',
+          options: ['node value', 'numeric value of a path', 'goal state', 'action'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Solution in search is _______.',
+          options: ['single node', 'sequence of actions', 'heuristic only', 'random path'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Blocks World is example of _______.',
+          options: ['planning problem', 'database system', 'sorting problem', 'networking problem'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'ON(A,B) is _______.',
+          options: ['action', 'predicate', 'operation', 'rule'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'PICKUP(X) is _______.',
+          options: ['predicate', 'operation', 'state', 'fact'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'DELETE list contains _______.',
+          options: ['new facts', 'removed facts', 'goals', 'actions'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'ADD list contains _______.',
+          options: ['removed facts', 'new facts', 'goals', 'heuristics'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Knowledge is _______.',
+          options: ['experience-based awareness', 'execution', 'planning', 'memory only'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Reasoning is _______.',
+          options: ['storing data', 'logical thinking', 'executing code', 'sensing'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Meta-knowledge is _______.',
+          options: ['facts', 'knowledge about knowledge', 'actions', 'rules only'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Procedural knowledge is _______.',
+          options: ['facts', 'how to do something', 'object description', 'graphs'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Declarative knowledge is _______.',
+          options: ['facts about objects', 'algorithms', 'execution steps', 'planning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Structural knowledge is _______.',
+          options: ['object attributes', 'actions', 'rules', 'goals'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Knowledge level means _______.',
+          options: ['implementation code', 'what agent knows', 'hardware', 'sensors'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Logical level means _______.',
+          options: ['execution', 'representation of knowledge', 'hardware', 'output'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Ask operation means _______.',
+          options: ['update KB', 'query KB', 'delete KB', 'ignore KB'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Tell operation means _______.',
+          options: ['query KB', 'update KB', 'stop agent', 'remove rules'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Frame representation uses _______.',
+          options: ['graphs', 'slots and fillers', 'logic', 'tables'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Semantic network consists of _______.',
+          options: ['nodes and arcs', 'tables', 'arrays', 'lists'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Production rules use _______.',
+          options: ['IF-THEN', 'graphs', 'frames', 'loops'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Propositional logic is _______.',
+          options: ['Boolean logic', 'frame logic', 'graph logic', 'planning logic'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Atomic proposition is _______.',
+          options: ['simple statement', 'complex rule', 'graph', 'action'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Compound proposition is _______.',
+          options: ['single fact', 'combined statements', 'object', 'rule only'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Conjunction means _______.',
+          options: ['OR', 'AND', 'NOT', 'IF'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Disjunction means _______.',
+          options: ['OR', 'AND', 'NOT', 'IF'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Implication is _______.',
+          options: ['P ∨ Q', 'P → Q', 'P ∧ Q', 'P ↔ Q'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Biconditional is _______.',
+          options: ['P ↔ Q', 'P → Q', 'P ∨ Q', 'NOT P'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Tautology means _______.',
+          options: ['always false', 'always true', 'sometimes true', 'unknown'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Contradiction means _______.',
+          options: ['always true', 'always false', 'uncertain', 'probabilistic'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Deductive reasoning is _______.',
+          options: ['specific → general', 'general → specific', 'random', 'uncertain'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Inductive reasoning is _______.',
+          options: ['general → specific', 'specific → general', 'logic only', 'false reasoning'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Abductive reasoning is _______.',
+          options: ['best explanation', 'deduction', 'planning', 'logic table'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Monotonic reasoning means _______.',
+          options: ['old conclusions always valid', 'always changing', 'random', 'uncertain'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Non-monotonic reasoning deals with _______.',
+          options: ['complete knowledge', 'incomplete knowledge', 'math only', 'graphs'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Posterior probability is _______.',
+          options: ['before evidence', 'after evidence', 'fixed', 'unknown'],
+          correct: 1,
+          explanation: ''
+        },
+        // Section B: True/False (41-50)
+        {
+          question: 'Wumpus World is fully observable.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'KBA can update its knowledge base.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'BFS is always optimal.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Frames use slots and fillers.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Semantic networks use nodes and relationships.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Tautology is always false.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Inductive reasoning goes from specific to general.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Production rules use IF-THEN logic.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Non-monotonic reasoning works with uncertainty.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Knowledge-based agents cannot learn.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        }
+      ]
     }
   ],
   scores: {} // Store last scores for each category
