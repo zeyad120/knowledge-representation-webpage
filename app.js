@@ -1,13 +1,14 @@
 // Quiz Database - Updated with user-provided questions
 const quizDatabase = {
   categories: [
-    // Quiz 1
+    // Merged Quiz 1, 2, 3 - Reasoning and Agents - Lec. 1, 2, 3
     {
-      id: 'knowledge-representation',
-      title: 'Quiz 1',
-      description: 'Test your knowledge on KR concepts',
+      id: 'reasoning-agents-lec-1-2-3',
+      title: 'Reasoning and Agents - Lec. 1, 2, 3',
+      description: 'Test your knowledge on KR concepts, advanced KR, and agents',
       icon: '🧠',
       questions: [
+        // Quiz 1 Questions (20 questions)
         {
           question: 'In which agent does the problem generator is present?',
           options: ['Learning agent', 'Observing agent', 'Reflex agent', 'None of the mentioned'],
@@ -127,16 +128,8 @@ const quizDatabase = {
           options: ['DELETE List', 'State List', 'Precondition List', 'ADD List'],
           correct: 3,
           explanation: ''
-        }
-      ]
-    },
-    // Quiz 2
-    {
-      id: 'quiz-2',
-      title: 'Quiz 2',
-      description: 'Test your knowledge on advanced KR concepts',
-      icon: '📚',
-      questions: [
+        },
+        // Quiz 2 Questions (34 questions)
         {
           question: 'Knowledge and reasoning also play a crucial role in dealing with __________________ environment.',
           options: ['Completely Observable', 'Partially Observable', 'Neither Completely nor Partially Observable', 'Only Completely and Partially Observable'],
@@ -340,16 +333,8 @@ const quizDatabase = {
           options: ['Inference', 'Slot', 'Frame', 'Logic'],
           correct: 3,
           explanation: ''
-        }
-      ]
-    },
-    // Quiz 3 (True/False)
-    {
-      id: 'quiz-3',
-      title: 'Quiz 3 true/false',
-      description: 'Test your knowledge with true/false questions',
-      icon: '✅',
-      questions: [
+        },
+        // Quiz 3 Questions (34 questions)
         {
           question: 'One applications of intelligent agents is Information search, retrieval, and navigation.',
           options: ['True', 'False'],
