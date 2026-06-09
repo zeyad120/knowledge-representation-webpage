@@ -1446,6 +1446,12 @@ const quizDatabase = {
           options: ['Before evidence', 'After evidence', 'Fixed value', 'Random'],
           correct: 1,
           explanation: ''
+        },
+        {
+          question: 'Sample space is _______.',
+          options: ['One event', 'All possible events', 'One probability', 'None'],
+          correct: 1,
+          explanation: ''
         }
       ]
     }
