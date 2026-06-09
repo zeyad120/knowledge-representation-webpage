@@ -1145,6 +1145,309 @@ const quizDatabase = {
           explanation: ''
         }
       ]
+    },
+    // Final Quiz
+    {
+      id: 'final-quiz',
+      title: 'Final Quiz',
+      description: 'Comprehensive quiz covering all topics',
+      icon: '🎯',
+      questions: [
+        {
+          question: 'Wumpus World is a classic problem, best example of _______.',
+          options: ['Knowledge based Game', 'Reasoning with Knowledge', 'Single player Game', 'Two player Game'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Uncertainty arises in Wumpus World because sensors give _______.',
+          options: ['Full & Global information', 'Partial & Global Information', 'Partial & local Information', 'Full & local information'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'Knowledge-based agents are _______.',
+          options: ['Goal-Based Agents', 'Utility-Based Agents', 'Learning Agents', 'Knowledge-Based Agents'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: 'AI system components include _______.',
+          options: ['Perception, Learning, KR & Reasoning, Planning', 'Perception, Learning, KR & Reasoning, Execution', 'Perception, Learning, KR & Reasoning, Planning, Execution', 'Perception only'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'Which search uses problem specific knowledge?',
+          options: ['Informed search', 'DFS', 'BFS', 'Uninformed search'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'A* search is optimal when _______.',
+          options: ['h(n) is inconsistent', 'h(n) is consistent', 'DFS used', 'BFS used'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Greedy best-first search expands _______.',
+          options: ['Random node', 'Closest to goal', 'Deepest node', 'Lowest cost path only'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Path cost is _______.',
+          options: ['Function assigning numeric value to path', 'Node value', 'Goal state', 'Action sequence'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Solution is _______.',
+          options: ['Random path', 'Action sequence from start to goal', 'Single node', 'Heuristic value'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Properties of search algorithms include _______.',
+          options: ['Completeness, Optimality, Time, Space', 'Time only', 'Space only', 'Randomness'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Blocks World is example of _______.',
+          options: ['Knowledge based Game', 'Goal Stack Planning', 'Goal Queue Planning', 'Reasoning only'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'ON(A,B) is example of _______.',
+          options: ['Operation', 'Action', 'Predicate', 'List'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'PICKUP(X) is _______.',
+          options: ['State', 'Operation', 'Predicate', 'Knowledge'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'ONTABLE(A) is _______.',
+          options: ['State', 'Predicate', 'Operation', 'Rule'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'DELETE list contains _______.',
+          options: ['New facts', 'Removed predicates', 'Goals', 'Actions'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'ADD list contains _______.',
+          options: ['New true predicates', 'Deleted facts', 'Goals', 'States'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Knowledge is _______.',
+          options: ['Logical thinking', 'Awareness from experience', 'Planning', 'Execution'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Reasoning is _______.',
+          options: ['Thinking logically', 'Memory', 'Data storage', 'Execution'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Meta-knowledge means _______.',
+          options: ['Knowledge about knowledge', 'Basic facts', 'Actions', 'Rules only'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Procedural knowledge is _______.',
+          options: ['Knowing facts', 'Knowing how to do something', 'Objects description', 'Relations'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Declarative knowledge is _______.',
+          options: ['How to do', 'Facts about objects', 'Algorithms', 'Rules execution'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Structural knowledge is _______.',
+          options: ['Object attributes', 'Actions', 'Heuristics', 'Planning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Knowledge level is _______.',
+          options: ['Implementation', 'What agent knows and goals', 'Code level', 'Hardware level'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Logical level is _______.',
+          options: ['Physical execution', 'Representation of knowledge', 'Hardware', 'Sensors'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Implementation level is _______.',
+          options: ['Abstract level', 'Actual execution', 'Knowledge description', 'Planning'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'KBA operations are _______.',
+          options: ['Ask, Tell, Test', 'Run, Stop', 'Read, Write', 'Input only'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Ask operation means _______.',
+          options: ['Update KB', 'Query KB for action', 'Delete data', 'Store data'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Simple relational knowledge is _______.',
+          options: ['Graph', 'Tables', 'Logic', 'Rules'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Frame representation uses _______.',
+          options: ['Slots and fillers', 'Graphs', 'Rules', 'Logic'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Semantic network consists of _______.',
+          options: ['Tables', 'Nodes and arcs', 'Rules', 'Actions'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Production rules use _______.',
+          options: ['IF-THEN rules', 'Tables', 'Graphs', 'Frames'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Logical representation is _______.',
+          options: ['Natural language', 'Formal logic', 'Images', 'Graph only'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Propositional logic is _______.',
+          options: ['Object based', 'Boolean logic', 'Graph based', 'Frame based'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Atomic proposition is _______.',
+          options: ['Compound sentence', 'Simple statement', 'Rule', 'Function'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Compound proposition is _______.',
+          options: ['Single fact', 'Combined statements', 'Object', 'Action'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Conjunction is _______.',
+          options: ['OR', 'AND', 'NOT', 'IF'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Disjunction is _______.',
+          options: ['OR', 'AND', 'NOT', 'IF'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Implication is _______.',
+          options: ['P OR Q', 'P AND Q', 'P → Q', 'P ↔ Q'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'Biconditional is _______.',
+          options: ['P ↔ Q', 'P → Q', 'P OR Q', 'NOT P'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Tautology means _______.',
+          options: ['Always false', 'Always true', 'Sometimes true', 'Unknown'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Contradiction means _______.',
+          options: ['Always true', 'Always false', 'Sometimes true', 'Probable'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Reasoning is _______.',
+          options: ['Data storage', 'Drawing conclusions', 'Input only', 'Output only'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Deductive reasoning is _______.',
+          options: ['General → Specific', 'Specific → General', 'Random', 'Uncertain'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Inductive reasoning is _______.',
+          options: ['General → Specific', 'Specific → General', 'Logical proof', 'False reasoning'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Abductive reasoning is _______.',
+          options: ['Best explanation', 'Deduction', 'Random guess', 'Rule execution'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Monotonic reasoning means _______.',
+          options: ['New facts invalidate old conclusions', 'Old conclusions always remain valid', 'Random reasoning', 'No logic'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Non-monotonic reasoning deals with _______.',
+          options: ['Certainty', 'Incomplete knowledge', 'Math only', 'Fixed rules'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Prior probability is _______.',
+          options: ['After evidence', 'Before evidence', 'Always zero', 'Always one'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Posterior probability is _______.',
+          options: ['Before evidence', 'After evidence', 'Fixed value', 'Random'],
+          correct: 1,
+          explanation: ''
+        }
+      ]
     }
   ],
   scores: {} // Store last scores for each category
