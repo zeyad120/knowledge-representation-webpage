@@ -615,6 +615,551 @@ const quizDatabase = {
           explanation: ''
         }
       ]
+    },
+    // Quiz 4 - Reasoning and Agents
+    {
+      id: 'reasoning-agents',
+      title: 'Reasoning and Agents - Questions on Lec. 4, 5, 6',
+      description: 'Test your knowledge on Reasoning and Agents',
+      icon: '🤖',
+      questions: [
+        // MCQ Questions (1-55)
+        {
+          question: '_______________ is a language with some concrete rules which deals with propositions and has no ambiguity in representation.',
+          options: ['Logical Representation', 'Reasoning with Knowledge', 'Frame Representation', 'Semantic Network Representation'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '________________ means drawing a conclusion based on various conditions.',
+          options: ['Reasoning with Knowledge', 'Frame Representation', 'Semantic Network Representation', 'Logical Representation'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '______________ is the basic method used to represent the knowledge of a machine.',
+          options: ['Planning', 'Reasoning', 'Logic', 'Knowledge'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'Logical representation can be categorized into mainly two logics:',
+          options: ['Declarative, Procedural', 'Propositional, Predicate', 'Inheritable, Inferential', 'Logical, Declarative'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: '________________is the simplest form of logic where all the statements are made by propositions.',
+          options: ['Declarative Logic', 'Procedural Logic', 'Propositional Logic', 'Predicate Logic'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: '_______________ is a technique of knowledge representation in logical and mathematical form. It is also called Boolean logic as it works on 0 and 1.',
+          options: ['Declarative Logic', 'Propositional Logic', 'Procedural Logic', 'Predicate Logic'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'In propositional logic, there are two types of Propositions:',
+          options: ['Atomic Propositions, Compound propositions', 'Propositional, Predicate', 'Declarative, Procedural', 'None of the above'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '_________________ are constructed by combining simpler or atomic propositions, using parenthesis and logical connectives.',
+          options: ['Atomic propositions', 'Logical propositions', 'Compound propositions', 'All of the above'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: '______________ are used to connect two simpler propositions or representing a sentence logically.',
+          options: ['Logical connectives', 'Logical presenters', 'Logical Forms', 'Logical Actors'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'A sentence such as ¬ P is called ____________ of P. A literal can be either Positive literal or negative literal.',
+          options: ['Not', 'Negation', 'Conjunction', 'Disjunction'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'A sentence which has ∨ connective, such as P ∨ Q. is called ___________, where P and Q are the propositions.',
+          options: ['Not', 'Negation', 'Conjunction', 'Disjunction'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: 'A sentence such as P → Q, is called _____________. It is also known as if-then rule.',
+          options: ['Implication', 'Negation', 'Conjunction', 'Disjunction'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'A sentence such as P⇔ Q is a ____________ sentence.',
+          options: ['Implication', 'Biconditional', 'Conjunction', 'Disjunction'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'The syntax of propositional logic defines the allowable sentences for the______________.',
+          options: ['Frame Representation', 'Semantic Network Representation', 'Logical Representation', 'knowledge representation'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'A proposition formula which is always false is called ____________.',
+          options: ['tautology', 'Boolean logic', 'Contradiction', 'Propositional logic'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'A proposition formula which is always true is called ____________.',
+          options: ['tautology', 'Boolean logic', 'Contradiction', 'Propositional logic'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '__________ is the mental process of deriving logical conclusion and making predictions from available knowledge, facts, and beliefs. It is a way to infer facts from existing data.',
+          options: ['Planning', 'Reasoning', 'Contradiction', 'Propositional logic'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'In Artificial Intelligence, the ____________ is essential so that the machine can also think rationally as a human brain, and can perform like a human.',
+          options: ['Planning', 'Knowledge', 'Logical Representation', 'Reasoning'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: '_________________is a type of propositional logic in AI, and it requires various rules and facts. It is sometimes referred to as top-down reasoning.',
+          options: ['Inductive Reasoning', 'Abductive Reasoning', 'Deductive Reasoning', 'Common Sense Reasoning'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: '_________________ is a type of propositional logic, which is also known as cause-effect reasoning or bottom-up reasoning.',
+          options: ['Inductive Reasoning', 'Abductive Reasoning', 'Deductive Reasoning', 'Common Sense Reasoning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'In __________________, we use historical data or various premises to generate a generic rule, for which premises support the conclusion.',
+          options: ['Inductive Reasoning', 'Abductive Reasoning', 'Deductive Reasoning', 'Common Sense Reasoning'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: '_______________is a form of logical reasoning which starts with single or multiple observations then seeks to find the most likely explanation or conclusion for the observation.',
+          options: ['Inductive Reasoning', 'Abductive Reasoning', 'Deductive Reasoning', 'Common Sense Reasoning'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: '______________is an informal form of reasoning, which can be gained through experiences.',
+          options: ['Inductive Reasoning', 'Abductive Reasoning', 'Deductive Reasoning', 'Common Sense Reasoning'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: 'In______________, once the conclusion is taken, then it will remain the same even if we add some other information to existing information in our knowledge base.',
+          options: ['Inductive Reasoning', 'Abductive Reasoning', 'monotonic reasoning', 'Deductive Reasoning'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'To solve _________________, we can derive the valid conclusion from the available facts only, and it will not be affected by new facts.',
+          options: ['monotonic problems', 'Abductive Reasoning', 'Deductive Reasoning', 'Common Sense Reasoning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'In______________, some conclusions may be invalidated if we add some more information to our knowledge base.',
+          options: ['Monotonic Reasoning', 'Non-monotonic reasoning', 'Deductive Reasoning', 'Common Sense Reasoning'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: '________________ deals with incomplete and uncertain models.',
+          options: ['Monotonic Reasoning', 'Deductive Reasoning', 'Non-monotonic reasoning', 'Common Sense Reasoning'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'In Non-monotonic reasoning, we can choose probabilistic facts or can make assumptions.',
+          options: ['Deductive Reasoning', 'Common Sense Reasoning', 'Monotonic Reasoning', 'Non-monotonic reasoning'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: '___________is the form of valid reasoning, to deduce new information or conclusion from known related facts and information.',
+          options: ['Deductive reasoning', 'Inductive reasoning', 'Monotonic reasoning', 'Non-monotonic reasoning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '___________ arrives at a conclusion by the process of generalization using specific facts or data.',
+          options: ['Deductive reasoning', 'Inductive reasoning', 'Monotonic reasoning', 'Non-monotonic reasoning'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: '______________ reaches from general facts to specific facts.',
+          options: ['Deductive reasoning', 'Inductive reasoning', 'Monotonic reasoning', 'Non-monotonic reasoning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '______________ reaches from specific facts to general facts.',
+          options: ['Deductive reasoning', 'Inductive reasoning', 'Monotonic reasoning', 'Non-monotonic reasoning'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'To represent uncertain knowledge, where we are not sure about the predicates, we need __________ or probabilistic reasoning.',
+          options: ['uncertain reasoning', 'certain reasoning', 'logical reasoning', 'Monotonic reasoning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '_____________is a way of knowledge representation where we apply the concept of probability to indicate the uncertainty in knowledge.',
+          options: ['Certain reasoning', 'Probabilistic reasoning', 'Monotonic reasoning', 'Non- Monotonic reasoning'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: '______________ can be defined as a chance that an uncertain event will occur.',
+          options: ['Planning', 'Reasoning', 'Probability', 'Contradiction'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'The collection of all possible events is called_____________.',
+          options: ['Random variables', 'Prior probability', 'Posterior Probability', 'Sample space'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: '_______________ are used to represent the events and objects in the real world.',
+          options: ['Random variables', 'Prior probability', 'Posterior Probability', 'Sample space'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'The _______________ of an event is probability computed before observing new information.',
+          options: ['Random variables', 'Prior probability', 'Posterior Probability', 'Sample space'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: '________________is the probability that is calculated after all evidence or information has taken into account. It is a combination of prior probability and new information.',
+          options: ['Random variables', 'Prior probability', 'Posterior Probability', 'Sample space'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: '________________is a probability of occurring an event when another event has already happened.',
+          options: ['Prior probability', 'Posterior Probability', 'Probabilistic Reasoning', 'Conditional Probability'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: '_________is also known as Bayes\' law determines the probability of an event with uncertain knowledge.',
+          options: ['Bayes\' theorem', 'Bayes\' rule', 'Bayesian reasoning', 'All of the above'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: 'The ___________ helps us to represent Bayesian thinking. We can use it in data science when the amount of data to model is moderate, incomplete, and/or uncertain.',
+          options: ['Bayesian network', 'Bayes\' theorem', 'Bayes\' rule', 'Bayesian reasoning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'For example, a robot cannot pick up a particular object if it is nowhere near the object. The ____________ of an action specifies when the action can be carried out. The ____________of an action specifies the resulting state.',
+          options: ['Prior probability, Posterior Probability', 'Effect, Precondition', 'Precondition, Effect', 'Posterior Probability, Prior probability'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'A _____________is a partial function from states to states.',
+          options: ['Prior probability', 'deterministic action', 'Posterior Probability', 'All of the above'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'In ______________of a graph, where the nodes are states and the acts are actions. This is called a state-space graph. Any of the search algorithms can be used to search the space.',
+          options: ['explicit representation', 'STRIPS Representation', 'Feature-Based Representation', 'deterministic action'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '__________________ is an action-centric representation which, for each action, specifies when the action can occur and the effects of the action.',
+          options: ['explicit representation', 'STRIPS Representation', 'Feature-Based Representation', 'deterministic action'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'The _______________ is used to specify the values of primitive features in a state based on the previous state and the action taken by the agent.',
+          options: ['explicit representation', 'STRIPS Representation', 'Feature-Based Representation', 'deterministic action'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: '______________ is more flexible than other representations, as it allows for conditional effects, and non-local effects.',
+          options: ['explicit representation', 'STRIPS Representation', 'Feature-Based Representation', 'deterministic action'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'In the feature-based representation of actions, there are two forms of rules which are; (i) ______________specifies when a feature gets a new value. (ii) _______________specifies when a feature keeps its value.',
+          options: ['Non causal rule, causal rule', 'frame rule, causal rule', 'causal rule, frame rule', 'causal rule, Non causal rule'],
+          correct: 2,
+          explanation: ''
+        },
+        {
+          question: 'A ______________is a sequence of actions to achieve a goal from a given starting state.',
+          options: ['explicit representation', 'STRIPS representation', 'feature-based representation', 'deterministic plan'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: 'What is the name of the following figure?',
+          options: ['Bayesian Network', 'Probability Reasoning', 'Monotonic Network', 'Non-Monotonic Network'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: '_______________is a python package that implements fast, efficient, and extremely flexible probabilistic models ranging from probability distributions to Bayesian networks to mixtures of hidden Markov models.',
+          options: ['Bayesian', 'Pomegranate', 'Logic', 'Knowledge'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: '"Earth revolves around the Sun" is an example of _______________.',
+          options: ['Certain reasoning', 'Probabilistic reasoning', 'Monotonic reasoning', 'Non- Monotonic reasoning'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Birds can fly, Penguins cannot fly, Pitty is a bird so from the above sentences, we can conclude that Pitty can fly. The previous example is an example of ___________.',
+          options: ['Certain reasoning', 'Probabilistic reasoning', 'Monotonic reasoning', 'Non- Monotonic reasoning'],
+          correct: 3,
+          explanation: ''
+        },
+        {
+          question: 'A ___________ specifies when a feature gets a new value. A ______________ specifies when a feature keeps its value.',
+          options: ['Casual rule, frame rule', 'Frame rule, casual rule', 'Formed rule, Informed rule', 'Informed rule, Formed rule'],
+          correct: 0,
+          explanation: ''
+        },
+        // True/False Questions (1-34)
+        {
+          question: 'Logic is the basic method used to represent the knowledge of a machine.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Planning is the basic method used to represent the knowledge of a machine.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Statements which are questions, commands, or opinions are not propositions such as "Where is Rohini", "How are you", "What is your name", are propositions.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'A proposition formula which is always true is called tautology, and it is also called a valid sentence.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'A proposition formula which is always false is called Contradiction.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Atomic propositions are the simple propositions. It consists of a single proposition symbol.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Atomic proposition can be a true fact (Contradiction) or false fact (Tautology).',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'A sentence such as ¬ P is called negation of P. A literal can be either Positive literal or negative literal.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'A sentence which has ∨ connective such as, P ∨ Q is called a conjunction.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'A sentence such as P → Q, is called an implication. Implications are also known as if-then rules.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'A sentence which has ∨ connective, such as P ∨ Q. is called disjunction, where P and Q are the propositions.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'A sentence which has ∧ connective such as, P ∧ Q is called a disjunction.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Two propositions are said to be logically equivalent if and only if the columns in the truth table are identical to each other.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Just like arithmetic operators, there is a precedence order for propositional connectors or logical operators.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Propositional logic cannot be used to make game engine knowledgeable.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Inductive and deductive reasoning are the forms of propositional logic.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Inductive Reasoning is deducing new information from logically related known information.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Inductive reasoning is a form of reasoning to arrive at a conclusion using limited sets of facts by the process of generalization.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Inductive Reasoning is a type of propositional logic, which is also known as cause-effect reasoning or bottom-up reasoning.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'We can represent the real world scenarios using Monotonic reasoning.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Hypothesis knowledge cannot be expressed with monotonic reasoning, which means facts should be true.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'In monotonic reasoning, each old proof will always remain valid.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'For real-world systems such as Robot navigation, we can use non-monotonic reasoning.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'Non-monotonic reasoning can be used for theorem proving.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Deductive reasoning reaches from specific facts to general facts.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Inductive reasoning reaches from general facts to specific facts.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'Knowledge representation is learned using propositional logic with certainty, which means we were sure about the predicates.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'We use probability in probabilistic reasoning because it provides a way to handle the uncertainty that is the result of someone\'s laziness and ignorance.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'In probabilistic reasoning, there are two ways to solve problems with uncertain knowledge which are; Bayes\' rule and Bayesian Statistics.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'The Bayesian network helps us to represent Bayesian thinking. We can use it in data science when the amount of data to model is moderate, incomplete, and/or uncertain.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'In the feature-based representation of actions, frame rule specifies when a feature gets a new value.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'In the feature-based representation of actions, causal rule specifies when a feature keeps its value.',
+          options: ['True', 'False'],
+          correct: 1,
+          explanation: ''
+        },
+        {
+          question: 'In the feature-based representation of actions, frame rule specifies when a feature keeps its value.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        },
+        {
+          question: 'In the feature-based representation of actions, causal rule specifies when a feature gets a new value.',
+          options: ['True', 'False'],
+          correct: 0,
+          explanation: ''
+        }
+      ]
     }
   ],
   scores: {} // Store last scores for each category
@@ -705,7 +1250,7 @@ function startQuiz(category) {
 // Render Current Question
 function renderQuestion() {
   const question = currentCategory.questions[currentQuestionIndex];
-  questionText.textContent = question.question;
+  questionText.textContent = `Q${currentQuestionIndex + 1}. ${question.question}`;
   
   optionsContainer.innerHTML = '';
   question.options.forEach((option, index) => {
