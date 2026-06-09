@@ -184,8 +184,8 @@ body {
   .category-description {font-size:0.85rem;}
   .quiz-screen {padding-top:120px;}
   .quiz-header {flex-direction:column; align-items:flex-start;}
-  .quiz-navigation {flex-direction:row; justify-content:space-between;}
-  .nav-button {flex:1; margin:0 5px; padding:12px 20px;}
+  .quiz-navigation {flex-direction:row !important; justify-content:space-between !important; gap:10px !important;}
+  .nav-button {flex:1 !important; margin:0 !important; padding:12px 15px !important; width:auto !important;}
 }
 @media (min-width: 1200px) {
   .categories-grid {grid-template-columns:repeat(4,1fr);}
