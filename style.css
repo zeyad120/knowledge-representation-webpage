@@ -184,7 +184,8 @@ body {
   .category-description {font-size:0.85rem;}
   .quiz-screen {padding-top:120px;}
   .quiz-header {flex-direction:column; align-items:flex-start;}
-  .nav-button {width:100%;}
+  .quiz-navigation {flex-direction:row; justify-content:space-between;}
+  .nav-button {flex:1; margin:0 5px; padding:12px 20px;}
 }
 @media (min-width: 1200px) {
   .categories-grid {grid-template-columns:repeat(4,1fr);}
