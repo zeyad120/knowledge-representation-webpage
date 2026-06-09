@@ -709,12 +709,25 @@ function renderQuestion() {
   
   optionsContainer.innerHTML = '';
   question.options.forEach((option, index) => {
-    const optionElement = document.createElement('div');
-    optionElement.className = 'option';
+    const optionElement = document.createElement('button');
+    optionElement.className = 'option-button';
+    optionElement.type = 'button';
     
     const selectedAnswer = userAnswers[currentQuestionIndex];
+    const isAnswered = selectedAnswer !== undefined;
+    
     if (selectedAnswer === index) {
       optionElement.classList.add('selected');
+    }
+    
+    // If already answered, show feedback and disable
+    if (isAnswered) {
+      optionElement.disabled = true;
+      if (index === question.correct) {
+        optionElement.classList.add('correct');
+      } else if (index === selectedAnswer && selectedAnswer !== question.correct) {
+        optionElement.classList.add('incorrect');
+      }
     }
     
     optionElement.innerHTML = `
@@ -731,7 +744,28 @@ function renderQuestion() {
 // Select Answer
 function selectAnswer(answerIndex) {
   userAnswers[currentQuestionIndex] = answerIndex;
-  renderQuestion();
+  const question = currentCategory.questions[currentQuestionIndex];
+  const isCorrect = answerIndex === question.correct;
+  
+  // Show feedback on options
+  const options = optionsContainer.querySelectorAll('.option-button');
+  options.forEach((option, index) => {
+    option.disabled = true;
+    if (index === question.correct) {
+      option.classList.add('correct');
+    } else if (index === answerIndex && !isCorrect) {
+      option.classList.add('incorrect');
+    }
+  });
+  
+  // Show incorrect popup if wrong
+  if (!isCorrect) {
+    showIncorrectPopup();
+  }
+  
+  // Update question grid with correct/incorrect status
+  updateQuestionGridWithFeedback(currentQuestionIndex, isCorrect);
+  
   updateNavigationButtons();
 }
 
@@ -762,14 +796,26 @@ function renderQuestionGrid() {
 function updateQuestionGrid() {
   const items = questionGrid.querySelectorAll('.question-nav-button');
   items.forEach((item, index) => {
-    item.classList.remove('answered', 'current');
+    item.classList.remove('answered', 'current', 'correct', 'incorrect');
     if (index === currentQuestionIndex) {
       item.classList.add('current');
     }
     if (userAnswers[index] !== undefined) {
+      const isCorrect = userAnswers[index] === currentCategory.questions[index].correct;
       item.classList.add('answered');
+      item.classList.add(isCorrect ? 'correct' : 'incorrect');
     }
   });
+}
+
+// Update Question Grid with Feedback (for immediate feedback)
+function updateQuestionGridWithFeedback(questionIndex, isCorrect) {
+  const items = questionGrid.querySelectorAll('.question-nav-button');
+  const item = items[questionIndex];
+  if (item) {
+    item.classList.add('answered');
+    item.classList.add(isCorrect ? 'correct' : 'incorrect');
+  }
 }
 
 // Go to Specific Question
@@ -785,15 +831,10 @@ function updateNavigationButtons() {
   prevButton.disabled = currentQuestionIndex === 0;
   
   const totalQuestions = currentCategory.questions.length;
-  const answeredCount = Object.keys(userAnswers).length;
   
   if (currentQuestionIndex === totalQuestions - 1) {
     nextButton.style.display = 'none';
-    if (answeredCount === totalQuestions) {
-      submitButton.style.display = 'block';
-    } else {
-      submitButton.style.display = 'none';
-    }
+    submitButton.style.display = 'block';
   } else {
     nextButton.style.display = 'block';
     submitButton.style.display = 'none';
